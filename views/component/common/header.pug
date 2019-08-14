@@ -1,0 +1,31 @@
+nav.navbar
+  a.logo(href='/')
+    img(src='/images/frame.svg' alt='logo')
+  ul.nav-links
+    li.nav-item
+      a(href='/discover') Discover
+    li.nav-item
+      a(href='/following') Following
+    if user
+      li.nav-item#user-profile
+        div.user-photo-wrapper
+          img#user-photo(src=`${user.profilePhoto}`)
+        if user
+          div.user-drawer-menu#user-drawer-menu
+            ul.menu-link
+              li.menu-item
+                a(href=`/profile/${user.username}`) @#{user.username}
+              li.menu-item
+                a(href=`/users/${user.username}/likes`) Likes
+              li.menu-item
+                a(href=`/users/settings`) Settings
+              hr
+              li.menu-item#btn-logout
+                a(href='#') Logout
+      li.nav-item#btn-post
+        a(href='#') Post
+    else
+      li.nav-item
+        a(href='/signin') Login
+      li.nav-item#header-btn-signup
+        a(href='/signup') Sign Up

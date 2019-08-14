@@ -1,0 +1,73 @@
+.main-grid {
+  display: grid;
+}
+
+.grid-item {
+  width: 33.3%;
+  cursor: pointer;
+}
+
+.grid-item img {
+  width: 100%;
+  float: left;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:black
+}
+
+.img-overlay:hover {
+  opacity: 0.5;
+}
+
+.img-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.img-text-content {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.img-like {
+  position: relative;
+  top: 50%;
+  left: 44%;
+  text-align: center;
+  width: 12%;
+  background: black;
+}
+
+.img-like img{
+  width: 35%;
+}
+
+.img-like p {
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+}

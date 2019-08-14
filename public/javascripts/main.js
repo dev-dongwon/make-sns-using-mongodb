@@ -1,0 +1,1 @@
+new Isotope( '.main-grid', {});

@@ -1,2 +1,3 @@
-# make-sns-using-mongodb
-sns 사이트 만들기 (using mongoDB)
+Express, MongoDB를 활용한 SNS 사이트 만들기
+=======
+

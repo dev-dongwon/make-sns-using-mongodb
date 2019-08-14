@@ -1,0 +1,11 @@
+div#post-box
+  form(action='/post' method='POST' enctype='multipart/form-data' id="post-form")
+    #post-text-area
+      textarea#content(name="content" placeholder="Texting here" autofocus="")
+    div#post-preview-area
+    hr
+    #post-btn-area
+      button.btn#post-post-btn(type='submit') Submit
+      #filebox
+        label.btn(for='post-image-btn') Image
+        input#post-image-btn(type='file' name='image' multiple)

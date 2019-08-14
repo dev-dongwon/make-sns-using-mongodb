@@ -1,0 +1,85 @@
+.signin-box {
+  position: absolute;
+  top : 28%;
+  left: 35%;
+  width: 30%;
+  text-align: center;
+  height: 50%;
+}
+
+.signin-box-form {
+  position: relative;
+  top: 5%;
+}
+
+.form-label-group input {
+  font-size:1.0em;
+  height: 60px;
+  width: 70%;
+  margin: 5px 0;
+  padding: 10px;
+  border : none;
+  outline: none;
+}
+
+.btn-signin {
+  margin: 3% 0;
+  width: 70%;
+  height:60px;
+  background: rgb(134, 134, 255);
+  color:#fff;
+  border:none;
+  position:relative;
+  font-size:1.2em;
+  padding:0 2em;
+  cursor:pointer;
+  transition: 0.5s ease all;
+  outline:none;
+  border-radius: 10px;
+}
+
+.btn-signin:hover {
+  color: black
+}
+
+hr {
+  width: 70%;
+  margin: auto;
+}
+
+#btn-signin-google {
+  background: rgb(255, 73, 73);
+  color: white;
+  margin-bottom: 3%;
+}
+
+#btn-signin-google:hover {
+  color: black
+}
+
+.siginin-title{
+  text-align: left;
+  margin-left: 15%;
+  margin-bottom: 5%;
+}
+
+
+.signin-link-forgot-password {
+  text-align: left;
+  margin-left: 15%;
+}
+
+.signin-link-forgot-password a {
+  text-decoration: none;
+  font-size: smaller;
+  color: gray
+}
+
+.signin-link-forgot-password a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+body {
+  background-color : lightcyan
+}

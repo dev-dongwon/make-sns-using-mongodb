@@ -1,0 +1,29 @@
+#content-modal.modal
+  .modal-content
+    #modal-describe 정말 삭제하시겠습니까?
+    .modal-btn#modal-btn-yes Yes
+    .modal-btn#modal-btn-no No
+div.settings-header-img
+h1.settings-prifile-content-title Profile
+p.settings-prifile-content-describe 멋진 사진과 자세한 소개를 담은 프로필에 사람들은 주목하기 마련입니다
+div.settings-prorile-wrapper
+  div.settings-profile-image
+    div.settings-profile-image-preview
+      img(src=`${user.profilePhoto}`)
+    div#filebox
+      label.btn(for='post-image-btn') Upload Avatar
+      input#post-image-btn(type='file' name='image' multiple)
+  div.settings-profile-content
+    if user
+      input(type="hidden" id='input-user-origin-identifier' value=`${user.username}`)
+      div.form-label-group
+        input(type='text' name='location' id='input-location' placeholder='Location' value=`${user.location || ''}`)
+      div.form-label-group
+        input(type='text' name='bio' id='input-bio' placeholder='Bio' value=`${user.bio || ''}`)
+      div.form-label-group
+        input(type='text' name='link' id='input-link' placeholder='Link' value=`${user.link || ''}`)
+      button#btn-settings Complete
+div.settings-prorile-remove
+h1.settings-prifile-content-title Account Deletion
+p.settings-prifile-content-describe 계정을 삭제하면 모든 개인정보와 게시물이 삭제되며, 정보를 복구할 수 없습니다. 동의하실 경우 아래 버튼을 눌러주세요.
+button.btn.settings-profile-delete-btn 계정 삭제

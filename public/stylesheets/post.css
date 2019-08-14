@@ -1,0 +1,77 @@
+#post-box {
+  min-height: 200px;
+  display: none;
+  margin : auto;
+}
+
+#post-preview-area {
+  border: 1px dashed black;
+  min-height: 150px;
+  display: none;
+  padding: 10px;
+}
+
+#content {
+  resize: none;
+  width: 100%;
+  min-height: 100px;
+  padding: 20px;
+  outline: none;
+  margin-top: 5px;
+}
+
+#post-text-area {
+  height: 100px;
+}
+
+#post-btn-area {
+  margin-top: 15px;
+  height: 50px;
+}
+
+hr {
+  margin-top: 20px;
+
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 13px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+  border-radius: 5px;
+  float: right;
+}
+
+#filebox label {
+  padding: 12.5px 25px;
+}
+
+#post-image-btn {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#post-btn-cancel {
+  font-size: smaller;
+  color: gray;
+}
+
+.preview {
+  width: auto;
+  height: 150px;
+  margin: 10px;
+  border: 10px solid black;
+}

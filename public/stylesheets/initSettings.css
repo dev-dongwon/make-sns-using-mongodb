@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+.settings-prorile-wrapper {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 25% 75%;
+  margin-top: 5%;
+}
+
+.settings-profile-image {
+  min-height: 300px;
+}
+
+.settings-profile-content {
+  min-height: 500px;
+}
+
+.settings-profile-image-preview {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 3% 1%;
+}
+
+.settings-profile-image-preview img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  }
+  
+
+.settings-prifile-content-title {
+  margin-bottom: 2%;
+  font-weight: 900
+}
+
+.settings-prifile-content-describe {
+  margin-bottom: 2%;
+  font-size: smaller;
+  color: gray;
+}
+
+.form-label-group input {
+  font-size:1.0em;
+  height: 50px;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border : none;
+  outline: none;
+  background: rgb(243, 243, 243);
+}
+
+.form-label-group input:not(#input-username) {
+  margin-bottom: 2%;
+}
+
+#btn-settings {
+  margin: 4% 0;
+  width: 20%;
+  background: rgb(134, 134, 255);
+  height:50px;
+  color:#fff;
+  border:none;
+  position:relative;
+  left: 2.5%;
+  font-size: 1.0em;
+  padding:0 1em;
+  cursor:pointer;
+  outline:none;
+  transition: 0.5s ease all;
+  border-radius: 5px;
+  float: right;
+}
+
+#post-image-btn {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#filebox label {
+  padding: 8px 18px;
+}
+
+.btn {
+  cursor: pointer;
+  border: 1px solid gray;
+  color: gray;
+  padding: 13px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 12%;
+  margin-top: 8%;
+  border-radius: 5px;
+}
+
+.main {
+  width: 60%;
+  margin: 5% auto;
+}
+
+.message-box {
+  position: relative;
+  text-align: left;
+  left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.message-box p {
+  font-size: smaller;
+}
+
+#main-message-wrapper {
+  color: rgb(8, 133, 190);
+  font-weight: 700;
+  background: rgb(136, 227, 255);
+  text-align: left;
+  height: 40px;
+  width: 35%;
+  margin: auto;
+  padding: 20px;
+  display: none;
+  grid-template-columns: 97% 3%;
+}
+
+#main-message-exit-box {
+  cursor: pointer;
+}

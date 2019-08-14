@@ -1,0 +1,11 @@
+.main-grid
+  for post in posts
+    .grid-item
+      a.main-content-link(href=`/contents/${post._id}`)
+        img(src=`${post.photo[0]}`)
+        div.img-overlay
+          div.img-text= `@${post.author.username}`
+          div.img-like
+            img(src='/images/board/fill-like.png')
+            p= post.meta.likes
+          div.img-text-content= post.content

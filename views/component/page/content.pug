@@ -1,0 +1,103 @@
+if content
+  #content-modal.modal
+    .modal-content
+      #modal-describe 정말 삭제하시겠습니까?
+      .modal-btn#modal-btn-yes Yes
+      .modal-btn#modal-btn-no No
+  .content-wrapper
+    div.content-photo
+      img.content-image(src=`${content.photo}`)
+      .content-body
+        p #{content.content}
+      div#content-update-box
+        #content-update-preview-area
+          img.content-update-preview-image(src=`${content.photo}`)
+        #content-update-text-area
+          textarea#content(name="content" placeholder="Texting here" autofocus="") #{content.content}
+        hr
+        #content-update-btn-area
+          button.btn#content-cancel-btn cancel
+          button.btn#content-update-btn Update
+          #filebox
+            label.btn(for='post-image-btn') Change Image
+            input#post-image-btn(type='file' name='image' multiple)
+    div.content-describe
+      input#hidden-content-id(type="hidden" value= content._id)
+      .content-header
+        .content-header-avatar
+          a(href=`/profile/${content.author.username}`)
+            img(src=`${content.author.profilePhoto}`)
+        .content-header-username
+          a(href=`/profile/${content.author.username}`)
+            p @#{content.author.username}
+        .content-header-follow
+          if user && (`${user._id}` !== `${content.author._id}`)
+            if user.followings.has(`${content.author._id}`)
+              img.box-header-follow.status-follow(src='/images/board/check.png' id=`follow-btn-${content.author._id}`)
+            else
+              img.box-header-follow.status-unfollow(src='/images/board/plus.svg' id=`follow-btn-${content.author._id}`)
+        .content-header-icon-wrapper
+          if user && (content.author.username === user.username)
+            .content-header-icon-modified
+              img#content-header-icon-modified(src='/images/content/modify.png')
+            .content-header-icon-delete
+              img#content-header-icon-delete(src='/images/content/delete.png')
+            .content-header-time
+              p= time
+          else
+            .content-header-icon-modified
+            .content-header-icon-delete
+            .content-header-time
+              p= time
+      hr
+      .content-footer
+        div.box-icon-box
+          img.box-bottom-see(src='/images/board/see.png')
+        div.box-icon-box
+          p.box-see-couint #{content.meta.views}
+        div.box-icon-box
+          img.box-bottom-comment(src='/images/board/comment.png')
+        div.box-icon-box
+          p.box-comment-count #{content.meta.comments}
+        div.box-icon-box
+          if user && user.likePosts
+            if user.likePosts.has(`${content._id}`)
+              img.box-bottom-like(src='/images/board/fill-like.png')
+            else
+              img.box-bottom-like(src='/images/board/like.png')
+          else
+            img.box-bottom-like(src='/images/board/like.png')
+        div.box-icon-box
+          p.box-like-count #{content.meta.likes}
+      hr
+      .content-comment-box
+        textarea#content-comment-area(name="comment", cols="30", rows="5" placeholder="commnet here")
+        button#btn-comment-submit(type='submit') comment
+      hr.comment-line
+      .contnet-reply-box
+        if content.comments.length > 0
+          for comment in content.comments
+            if comment.display === true
+              .content-reply(id=`content-reply-${comment._id}`)
+                .content-reply-avatar
+                  a(href=`/profile/${comment.username}`)
+                    img(src=`${comment.userAvatar}`)
+                .content-reply-comment
+                  .content-reply-comment-id
+                    a(href=`/profile/${comment.username}`)
+                      p @#{comment.username}
+                  .content-reply-comment-text
+                    p(id=`content-reply-text-${comment._id}`) #{comment.content}
+                .content-reply-icon-update
+                  if user && (comment.authorId === `${user._id}`)
+                    img.reply-update-icon(src='/images/content/modify.png' id=`update-${comment._id}`)
+                .content-reply-icon-remove
+                  if user && (comment.authorId === `${user._id}`)
+                    img.reply-remove-icon(src='/images/content/delete.png' id=`${comment._id}`)
+                .content-reply-time
+                  input.reply-created-time(type='hidden' value=`${comment.createdDate}`)
+              .content-update-text-area-wrapper(id=`content-update-text-area-${comment._id}`)
+                textarea.content-update-text-area(id=`content-update-form-${comment._id}` name="content" placeholder="Texting here" autofocus="" value='')
+                .btn-comment-update-cancel(id=`btn-comment-update-cancel-${comment._id}`) cancel
+                button.btn.btn-comment-update(id=`btn-comment-update-${comment._id}`) update
+              hr.reply-line(id=`reply-line-${comment._id}`)

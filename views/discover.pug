@@ -1,0 +1,14 @@
+doctype html
+html(lang='ko')
+  head
+    include component/common/head.pug
+    link(rel='stylesheet', href='/stylesheets/post.css')
+    link(rel='stylesheet', href='/stylesheets/discover.css')
+  body
+    include component/common/header.pug
+    div.main
+      include component/page/post.pug
+      include component/page/discover.pug
+  script(src='/javascripts/post.js')
+  script(src='/javascripts/discover.js')
+  script(src="/javascripts/library/isotope.pkgd.min.js")

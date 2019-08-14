@@ -1,0 +1,10 @@
+doctype html
+html(lang='ko')
+  head
+    include component/common/head.pug
+    link(rel='stylesheet', href='/stylesheets/post.css')
+  body
+    include component/common/header.pug
+    div.main
+      include component/page/post.pug
+  script(src='/javascripts/post.js')

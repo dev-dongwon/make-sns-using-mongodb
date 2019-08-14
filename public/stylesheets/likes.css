@@ -1,0 +1,261 @@
+.main {
+  width: 100%;
+}
+
+.profile-info-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: auto;
+  grid-column-gap: 20px;
+  background-color: rgba(145, 145, 145, 0.425);
+  background-size: 100%;
+  opacity: 0.8;
+  color: white;
+  padding: 0 30%;
+  text-shadow: 1px 1px 1px black;
+}
+
+.profile-photo {
+  height: 400px;
+  margin-top: 20%;
+}
+
+.profile-info {
+  min-height: 400px;
+  margin-top: 30%;
+}
+
+.profile-photo-area img{
+  position: absolute; top:0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-photo-area {
+  width: 85%;
+  height: 80%;;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  float: right;
+  background: white;
+}
+
+.profile-info-meta {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%; 
+}
+
+.profile-info-username {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10%;
+  text-align: center;
+  margin-right: 25%;
+}
+
+.profile-info-content {
+  margin-top: 5%;
+}
+
+.info-line {
+  width: 80%;
+  margin-top: 5%;
+  border :1px solid white;
+}
+
+.meta-title {
+  font-size: x-small;
+  text-align: center;
+}
+
+.meta-number {
+  text-align: center;
+  font-weight: 900;
+  padding: 5px;
+}
+
+.profile-info-lcoation {
+  text-align: center;
+  margin-right: 25%;
+}
+
+.profile-info-bio {
+  text-align: center;
+  margin-right: 25%;
+}
+
+.profile-user-board {
+  height: 500px;
+  border: 1px solid black;
+}
+
+.profile-settings {
+  border-radius: 10px;
+  background: white;
+  position: relative;
+  bottom: 50%;
+  padding: 5%;
+  left: 80%;;
+  text-align: center;
+  color: black;
+  width: 50%;
+  text-decoration: none;
+}
+
+.profile-settings:hover {
+  background: rgb(73, 73, 73);
+  color: white;
+  transition: all ease 0.2s;
+}
+
+.wrapper-line {
+  margin : 50px 0px;
+}
+
+
+
+
+.main {
+  width: 98%;  
+  margin: auto;
+}
+
+.discover-title {
+  text-align: center;
+}
+
+.discover-menu {
+  height: 100px;
+}
+
+.discover-content {
+  padding-left: 3px;
+}
+
+.discover-content-box {
+  width: 17.7%;
+  padding: 15px;
+  float: left;
+  margin: 1.1%;
+  border: 1px solid gray; 
+}
+
+.discover-content-box-header {
+  height: 60px;
+  position: relative;
+}
+
+.discover-content-box-body {
+  position: relative;
+  min-height: 300px;
+  overflow: auto;
+  padding: 5px;
+}
+
+.box-body-img {
+  width: 100%;
+  height: auto;
+}
+
+.box-body-content {
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.discover-content-box-bottom {
+  height: 70px;
+}
+
+.box-bottom-like {
+  width: 23px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.box-bottom-see {
+  width: 20px;
+  margin-top: 15px;
+}
+
+.box-bottom-comment {
+  width: 20px;
+  margin-top: 17px;
+  margin-left: 10px;
+}
+
+.box-icon-box {
+  vertical-align: top;
+  float: left;
+  margin-left: 12px;
+}
+
+.box-see-couint {
+  margin-top: 20px;
+  font-size: x-small;
+  font-weight: bolder;
+}
+
+.box-like-count {
+  margin-top: 20px;
+  font-size: x-small;
+  font-weight: bolder;
+}
+
+.box-header-avatar {
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.box-header-plus {
+  width: 13px;
+  margin-left: 10px;
+  vertical-align: bottom
+}
+
+.box-header-id {
+  margin-left: 10px;
+  position: absolute;
+  top: 30%;
+  left: 13%;
+  color: gray;
+  font-size: 13px;
+}
+
+.box-header-time {
+  float: right;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  color: gray;
+}
+
+.box-comment-count {
+  margin-top: 20px;
+  font-size: x-small;
+  font-weight: bolder;
+}
+
+.discover-menu-wrapper {
+  text-align: center;
+  padding-top: 40px;
+  font-weight: 900;
+  color: gray;
+}
+
+#post-box {
+  width: 80%;
+}
+
+.box-bottom-like {
+  cursor: pointer;
+}
+
+.likes-title {
+  text-align: center;
+  margin-bottom: 2%;
+}

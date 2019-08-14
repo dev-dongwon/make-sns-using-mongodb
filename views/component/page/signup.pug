@@ -1,0 +1,19 @@
+div.signup-box
+  form.signup-box-form(action="/users" method='POST')
+    div.siginup-title
+      h1 Join the Daily Frame
+      p The Network for Daily Artist
+    div.form-label-group
+      input(type='text' name='username' id='input-username' placeholder='Enter your username' required='' autofocus='')
+      div.message-box#message-username
+    div.form-label-group
+      input(type='email' name='email' id='input-email' placeholder='Enter your email' required='')
+      div.message-box#message-email
+    div.form-label-group
+      input(type='password' name='password' id='input-password' placeholder='Enter your password' required='')
+      div.message-box#message-password
+    button.btn-signup#btn-signup(type='submit') Sign Up
+    hr.seperator
+    button.btn-signup#btn-google-signup Sign Up with Google
+    div.link-login
+      a(href='/signin') 이미 계정이 있으신가요?

@@ -1,0 +1,47 @@
+div.discover-title
+  h1 My Friend's Art
+div.discover-menu
+  div.discover-menu-wrapper 같은 취향, 우린 친구군요
+if posts.length === 0
+  p.discover-empty 취향이 맞는 친구를 follow 해보세요
+div.discover-content
+  if posts.length > 0
+    for post in posts
+      .discover-content-box
+        .discover-content-box-header
+          a(href=`/profile/${post.author.username}`)
+            img.box-header-avatar(src=`${post.author.profilePhoto}`)
+          .box-header-id
+            span @#{post.author.username}
+            if user && (`${post.author._id}` !== `${user._id}`)
+              if user.followings.has(`${post.author._id}`)
+                div.follow-status now following
+                img.box-header-follow(src='/images/board/check.png' class=`${post.author._id}` id=`follow-btn-${post.author._id}`)
+              else
+                div.follow-status(style='background : red') not followed
+                img.box-header-follow(src='/images/board/plus.svg' class=`${post.author._id}` id=`follow-btn-${post.author._id}`)
+          .box-header-time#box-header-time
+          input.post-created-time(type='hidden' value=`${post.createdDate}`)
+        .discover-content-box-body
+          a.disdover-content-link(href=`/contents/${post._id}`)
+            img.box-body-img(src=`${post.photo[0]}`)
+          .box-body-content #{post.content}
+        .discover-content-box-bottom
+          div.box-icon-box
+            img.box-bottom-see(src='/images/board/see.png')
+          div.box-icon-box
+            p.box-see-couint #{post.meta.views}
+          div.box-icon-box
+            img.box-bottom-comment(src='/images/board/comment.png')
+          div.box-icon-box
+            p.box-comment-count #{post.meta.comments}
+          div.box-icon-box
+            input.post-number(type='hidden' value=`${post._id}`)
+            if user && user.likePosts.has(`${post._id}`)
+              img.box-bottom-like(src='/images/board/fill-like.png')
+            else
+              img.box-bottom-like(src='/images/board/like.png')
+          div.box-icon-box
+            p.box-like-count #{post.meta.likes}
+if posts.length > 0
+  div.discover-more-content More Content

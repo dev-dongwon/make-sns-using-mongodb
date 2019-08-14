@@ -1,0 +1,48 @@
+div.discover-title
+  h1 Discover Daily Art
+div.discover-menu
+  div.discover-menu-wrapper
+    span.discover-order-recent#discover-order-recent R e c e n t
+    span |
+    span.discover-order-trend#discover-order-trend T r e n d
+div.discover-content
+  if posts.length > 0
+    for post in posts
+      .discover-content-box
+        .discover-content-box-header
+          a(href=`/profile/${post.author.username}`)
+            img.box-header-avatar(src=`${post.author.profilePhoto}`)
+          .box-header-id
+            a(href=`/profile/${post.author.username}`)
+              span @#{post.author.username}
+            if user && (`${post.author._id}` !== `${user._id}`)
+              if user.followings.has(`${post.author._id}`)
+                div.follow-status now following
+                img.box-header-follow(src='/images/board/check.png' class=`${post.author._id}` id=`follow-btn-${post.author._id}`)
+              else
+                div.follow-status(style='background : red') not followed
+                img.box-header-follow(src='/images/board/plus.svg' class=`${post.author._id}` id=`follow-btn-${post.author._id}`)
+          .box-header-time#box-header-time
+          input.post-created-time(type='hidden' value=`${post.createdDate}`)
+        .discover-content-box-body
+          a.disdover-content-link(href=`/contents/${post._id}`)
+            img.box-body-img(src=`${post.photo[0]}`)
+          .box-body-content #{post.content}
+        .discover-content-box-bottom
+          div.box-icon-box
+            img.box-bottom-see(src='/images/board/see.png')
+          div.box-icon-box
+            p.box-see-couint #{post.meta.views}
+          div.box-icon-box
+            img.box-bottom-comment(src='/images/board/comment.png')
+          div.box-icon-box
+            p.box-comment-count #{post.meta.comments}
+          div.box-icon-box
+            input.post-number(type='hidden' value=`${post._id}`)
+            if user && user.likePosts.has(`${post._id}`)
+              img.box-bottom-like(src='/images/board/fill-like.png')
+            else
+              img.box-bottom-like(src='/images/board/like.png')
+          div.box-icon-box
+            p.box-like-count #{post.meta.likes}
+div.discover-more-content More Content

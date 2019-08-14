@@ -1,0 +1,12 @@
+doctype html
+html(lang='ko')
+  head
+    include component/common/head.pug
+    link(rel='stylesheet', href='/stylesheets/signin.css')
+  body
+    include component/common/header.pug
+    div.main
+      include component/common/flash-message.pug
+      include component/page/signin.pug
+  script(src='/javascripts/signin.js')
+  script(src='/javascripts/flash-message.js')

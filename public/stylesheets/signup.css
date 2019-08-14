@@ -1,0 +1,102 @@
+.signup-box {
+  position: absolute;
+  top : 22%;
+  left: 35%;
+  width: 30%;
+  text-align: center;
+  height: 50%;
+}
+
+.signup-box-form {
+  position: relative;
+  top: 5%;
+}
+
+.form-label-group input {
+  font-size:1.0em;
+  height: 60px;
+  width: 70%;
+  margin: 5px 0;
+  padding: 10px;
+  border : none;
+  border-bottom: 2px solid black;
+  background: none;
+  outline: none;
+}
+
+.btn-signup {
+  margin: 3% 0;
+  width: 70%;
+  background: rgb(134, 134, 255);
+  height:60px;
+  color:#fff;
+  border:none;
+  position:relative;
+  font-size:1.2em;
+  padding:0 2em;
+  cursor:pointer;
+  transition: 0.5s ease all;
+  outline:none;
+  border-radius: 10px;
+}
+
+#btn-google-signup {
+  background: rgb(255, 73, 73);
+  color: white;
+  margin-bottom: 3%;
+}
+
+#btn-google-signup:hover {
+  color: black;
+}
+
+.btn-signup:hover {
+  color: black
+}
+
+.siginup-title{
+  text-align: left;
+  margin-left: 15%;
+  margin-bottom: 5%;
+  margin-top: 0px;
+}
+
+.siginup-title p {
+  margin-top: 2%;
+}
+
+.link-login {
+  text-align: left;
+  margin-left: 15%;
+}
+
+.link-login a {
+  text-decoration: none;
+  font-size: smaller;
+  color: gray
+}
+
+.link-login a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.message-box {
+  position: relative;
+  text-align: left;
+  left: 16%;
+  margin-top: 2%;
+}
+
+.message-box p {
+  font-size: smaller;
+}
+
+.seperator {
+  width: 70%;
+  margin: auto;
+}
+
+body {
+  background-color : lightcyan
+}
